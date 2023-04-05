@@ -167,7 +167,7 @@ router.post("/file/upload", upload.single('file'), (req, res) =>{
         if(!req.file){
             return res.status(401).json({status:401, error: "File is missing."});
         }
-        const imageUrl = `https://sm-frontend-rouge.vercel.app/file/${req.file.filename}`;
+        const imageUrl = `https://sm-backend-5xl9.onrender.com/file/${req.file.filename}`;
         return res.status(201).json({ status:201, imageUrl: imageUrl});
     }
     catch(error){
